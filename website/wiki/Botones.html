@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Wiki de Parkour2D: Botones</title>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="../assets/parkour2dlogo.png">
+    <link rel="stylesheet" type="text/css" href="../styles/wikiStyles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Wiki de PARKOUR2D</h1>
+    <h1>Botones</h1>
+    <p class="padding-left-1"> Los botones son bloques 2D que cuando se interactua en ellos se ejecuta una acción. </p>
+    <h2>Crear boton en una pantalla</h2>
+    <p class="padding-left-1"> Para crear un boton es solamente rellenar la tabla que teneis abajo. </p>
+    <p class="padding-left-1"> modCreatior.newButtonFES( &lt;nombre de la pantalla&gt;, {<br> text = &lt;texto que quieres que valla en el boton&gt;, <br> x = &lt;posicion en horizontal&gt;, <br> y = &lt;posicion en vertical&gt;, <br> width = &lt;anchura del boton&gt;, <br> height
+        = &lt;altura del boton&gt;, <br> fontM = &lt;numero para cambiar el tamaño del texto&gt; (opcional)<br> }) </p>
+    <p class="padding-left-1"> Ejemplo: </p>
+    <pre>
+		<code class="codeBox">
+			<a class="codeBox-function">local</a> main = {}
+
+			<a class="codeBox-function">function</a> <a class="codeBox-functionName">main.load</a>(modCreator, api) 
+                            modCreatior.<a class="codeBox-functionName">newButtonFES</a>("testScreen", {
+                                text = "test_button",
+                                x = 100,
+                                y = 100,
+                                width = 300,
+                                height = 100,
+                                fontM = 1
+                            })
+			<a class="codeBox-function">end</a>
+			
+			<a class="codeBox-return">return</a> main
+		</code>
+	</pre>
+
+    <h1>Lista de la API 'modCreation'</h1>
+    <div>
+        <a href="Objects.html">Objetos</a> <br>
+        <a href="Pantallas.html">Pantallas</a> <br>
+        <a href="Botones.html">Botones</a> <br>
+        <a href="Textos.html">Textos</a> <br>
+    </div>
+
+    <h1>Lista de las otras APIs </h1>
+    <div>
+        <a href="otherAPI/JSON.html">JSON</a> <br>
+        <a href="otherAPI/screen.html">screen</a> <br>
+        <a href="otherAPI/Events.html">Events</a> <br>
+        <a href="otherAPI/modList.html">modList</a> <br>
+    </div>
+
+</body>
+
+</html>

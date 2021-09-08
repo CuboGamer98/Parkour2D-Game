@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Wiki de Parkour2D: screen</title>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="../../assets/parkour2dlogo.png">
+    <link rel="stylesheet" type="text/css" href="../../styles/wikiStyles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Wiki de PARKOUR2D</h1>
+    <h1>screen</h1>
+    <p class="padding-left-1"> Esta API proporciona varias funciones para poder manejar la pantalla principal de forma rápida. </p>
+    <h2>Como usar la API</h2>
+    <p class="padding-left-1"> En la API solo existen dos funciones importantes:</p>
+    <p class="padding-left-2">
+        <em>api.screen.setVisibilityN(&lt;nombre de la pantalla&gt;, &lt;estado&gt;)</em>, <em>api.screen.getVisibility(&lt;nombre de la pantalla&gt;)</em> y <br>
+        <em>api.screen.changeButtonPos(&lt;nombre del boton&gt;, &lt;x&gt;, &lt;y&gt;)</em>.
+    </p>
+    <p class="padding-left-2-small">
+        api.screen.setVisibilityN(&lt;nombre de la pantalla&gt;, &lt;estado&gt;): Si colocas el nombre de la pantalla y su estado, le cambias la visibilidad (<em>true</em> = visible, <em>false</em> = invisible). <br> api.screen.getVisibility(&lt;nombre
+        de la pantalla&gt;): Si le proporcionas el nombre de una pantalla, te devolvera su visibilidad. <br> api.screen.changeButtonPos(&lt;nombre del boton&gt;, &lt;x&gt;, &lt;y&gt;): Cuando le proporcionas el nombre de un boton y unas coordenadas, el
+        boton cambiara a la nueva posición.
+    </p>
+    <p class="padding-left-1"> Ejemplo: </p>
+    <pre>
+		<code class="codeBox">
+			<a class="codeBox-function">local</a> main = {}
+
+			<a class="codeBox-function">function</a> <a class="codeBox-functionName">main.load</a>(modCreator, api) 
+                            <a class="codeBox-local">local</a> mainVisibility = api.screen.<a class="codeBox-functionName">getVisibility</a>("main")
+                            <a class="codeBox-function">if</a> mainVisibility <a class="codeBox-function">then</a>
+                                api.screen.<a class="codeBox-functionName">setVisibilityN</a>("main", false)
+                            <a class="codeBox-function">end</a>
+			<a class="codeBox-function">end</a>
+			
+			<a class="codeBox-return">return</a> main
+		</code>
+	</pre>
+    <p class="padding-left-1"> Lo que estoy haciendo en este trozo de código es que si la visibilidad de la pantalla principal es <em>true</em> entonces pongo la pantalla invisible </p>
+
+    <h1>Lista de la API 'modCreation'</h1>
+    <div>
+        <a href="Objects.html">Objetos</a> <br>
+        <a href="Pantallas.html">Pantallas</a> <br>
+        <a href="Botones.html">Botones</a> <br>
+        <a href="Textos.html">Textos</a> <br>
+    </div>
+
+    <h1>Lista de las otras APIs </h1>
+    <div>
+        <a href="JSON.html">JSON</a> <br>
+        <a href="screen.html">screen</a> <br>
+        <a href="Events.html">Events</a> <br>
+        <a href="modList.html">modList</a> <br>
+    </div>
+
+</body>
+
+</html>

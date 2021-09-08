@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Wiki de Parkour2D: Pantallas</title>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="../assets/parkour2dlogo.png">
+    <link rel="stylesheet" type="text/css" href="../styles/wikiStyles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Wiki de PARKOUR2D</h1>
+    <h1>Pantallas</h1>
+    <p class="padding-left-1"> Las pantallas son menus, por ejemplo la pantalla principal o la de opciones también. </p>
+    <h2>Crear una pantalla</h2>
+    <p class="padding-left-1"> Para crear un objeto es tan fácil como poner su nombre. </p>
+    <pre>
+		<code class="codeBox">
+			<a class="codeBox-function">local</a> main = {}
+
+			<a class="codeBox-function">function</a> <a class="codeBox-functionName">main.load</a>(modCreator, api) 
+                            modCreatior.<a class="codeBox-functionName">newScreen</a>("testScreen")
+			<a class="codeBox-function">end</a>
+			
+			<a class="codeBox-return">return</a> main
+		</code>
+	</pre>
+
+    <h1>Lista de la API 'modCreation'</h1>
+    <div>
+        <a href="Objects.html">Objetos</a> <br>
+        <a href="Pantallas.html">Pantallas</a> <br>
+        <a href="Botones.html">Botones</a> <br>
+        <a href="Textos.html">Textos</a> <br>
+    </div>
+
+    <h1>Lista de las otras APIs </h1>
+    <div>
+        <a href="otherAPI/JSON.html">JSON</a> <br>
+        <a href="otherAPI/screen.html">screen</a> <br>
+        <a href="otherAPI/Events.html">Events</a> <br>
+        <a href="otherAPI/modList.html">modList</a> <br>
+    </div>
+
+</body>
+
+</html>

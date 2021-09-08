@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Wiki de Parkour2D</title>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="../assets/parkour2dlogo.png">
+    <link rel="stylesheet" type="text/css" href="../styles/wikiStyles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Wiki de PARKOUR2D</h1>
+
+    <p>Por CuboGamer98</p>
+
+
+    <!-- INTRUDUCCIÓN -->
+
+    <h1>1 – <a name="1">Introducción</a></h1>
+    <p> Parkour2D es un juego plataforma básico preparado para que los jugadores puedan crear juegos sin ningún problema. </p>
+    <p> Esta wiki proporciona a los jugadores novatos en programación para ayudarles a que ellos también puedan crear sus propios mods. </p>
+    <p> Es recomendable para la creación de mods saber <a href="https://www.lua.org/">Lua</a> </p>
+
+
+    <!-- COMO EMPEZAR -->
+
+    <h1>2 – <a name="2">Como empezar</a></h1>
+    <p> Para comenzar con la creación de mods hay que crear una carpeta donde estarán todos los archivos, para ello habrá que ir a <em>%appdata%</em> u localizar la carpeta <em>Parkour2D</em>. </p>
+    <p> Una vez localizada la carpeta procedemos a abrirla. Estando aquí si no está la carpeta <em>Mods</em> habría que crear una, pero si existe ya solo tienes que abrirla y ahora habría que crear la carpeta donde irán todos los archivos del mod, es obligatorio
+        que sea el nombre del mod y que no tenga espacios.</p>
+    <p> Después de haber creado la carpeta de tu mod procedes a abrirla y dentro tienes que crear un archivo llamado <em>main.lua</em>. Debería de quedar algo tal que así:</p>
+    <pre>
+		<code class="folderBox">
+            AppData/Roaming/Parkour2D/Mods/&lt;tu mod&gt;/main.lua
+		</code>
+	</pre>
+    <p> Estos pasos son los más importantes para que el mod funcione correctamente, tenéis que abrir el archivo y colocar este código: </p>
+    <pre>
+		<code class="codeBox">
+			<a class="codeBox-function">local</a> main = {}
+
+			<a class="codeBox-function">function</a> <a class="codeBox-functionName">main.load</a>(modCreator, api)
+
+			<a class="codeBox-function">end</a>
+			
+			<a class="codeBox-return">return</a> main
+		</code>
+	</pre>
+    <p> Hay un apartado opcional que podéis colocar si vais a usar la segunda API que es <em>main.config()</em>, en esta podeis elegir que vais a usar cambiando false por true.</p>
+    <pre>
+		<code class="codeBox">
+			<a class="codeBox-function">local</a> main = {}
+
+			<a class="codeBox-function">function</a> <a class="codeBox-functionName">main.conf</a>()
+                            <a class="codeBox-function">local</a> conf = {}
+			    conf.JSON = false
+			    conf.screen = false
+			    conf.modList = false
+	
+                            conf.Events = {}
+                            conf.Events.enabled = false
+                            conf.Events.plrJump = false
+                            conf.Events.plrWalk = false
+                            conf.Events.plrGetDamage = false
+	
+                            conf.Events.click_modMode = false
+                            conf.Events.click_FullScreen = false
+                            conf.Events.click_language = false
+                            conf.Events.click_controls = false
+                            conf.Events.click_options_back = false
+                            conf.Events.click_controls_back = false
+                            conf.Events.click_laguaje_es_es = false
+                            conf.Events.click_laguaje_en_us = false
+                            conf.Events.click_languaje_back = false
+                            conf.Events.click_start = false
+                            conf.Events.click_options = false
+                            conf.Events.click_quit = false
+
+			    <a class="codeBox-return">return</a> conf
+                        <a class="codeBox-function">end</a>
+
+			<a class="codeBox-function">function</a> <a class="codeBox-functionName">main.load</a>(modCreator, api)
+
+			<a class="codeBox-function">end</a>
+			
+			<a class="codeBox-return">return</a> main
+		</code>
+	</pre>
+    <p> Teniendo todo esto hecho podéis empezar a programar el mod.</p>
+
+
+    <!-- COMO EMPEZAR A PROGRAMAR EL MOD -->
+
+    <h1>3 – <a name="3">Como empezar a programar el mod</a></h1>
+    <p> Para empezar debes saber que todo el código siempre va a empezar a ejecutarse desde la función <em>main.load()</em>. Que significa esto, que todo lo que pongáis en la función <em>main.load()</em> se ejecutara nada más empezar el juego. </p>
+    <p> Si os disteis cuenta anteriormente, en la función <em>main.load()</em> había dos argumentos: <em>modCreator</em> y <em>api</em>, los dos argumentos son APIs que ofrece el mod para que se os haga más fácil la creación de mods. </p>
+
+    <p class="padding-left-2-big"> Si teneis alguna duda de algo ir al servidor de <a href="https://discord.gg/EnX2wQCQSS">Discord</a> de Parkour2D y preguntar. </p>
+
+    <!-- APIs -->
+
+    <h2>Lista de la API 'modCreation'</h2>
+    <div>
+        <a class="padding-left-2" href="Objects.html">Objetos</a> <br>
+        <a class="padding-left-2" href="Pantallas.html">Pantallas</a> <br>
+        <a class="padding-left-2" href="Botones.html">Botones</a> <br>
+        <a class="padding-left-2" href="Textos.html">Textos</a> <br>
+    </div>
+
+    <h2>Lista de las otras APIs</h2>
+    <div>
+        <a class="padding-left-2" href="otherAPI/JSON.html">JSON</a> <br>
+        <a class="padding-left-2" href="otherAPI/Events.html">Events</a> <br>
+        <a class="padding-left-2" href="otherAPI/modList.html">modList</a> <br>
+        <a class="padding-left-2" href="otherAPI/screen.html">screen</a> <br>
+    </div>
+
+</body>
+
+</html>

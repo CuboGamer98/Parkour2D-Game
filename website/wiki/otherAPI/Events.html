@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Wiki de Parkour2D: Events</title>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="../../assets/parkour2dlogo.png">
+    <link rel="stylesheet" type="text/css" href="../../styles/wikiStyles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Wiki de PARKOUR2D</h1>
+    <h1>Events</h1>
+    <p class="padding-left-1"> Es una API que proporcina eventos, que significa esto, que podeis crear eventos y recibir informacion de eventos que han sucedido. </p>
+    <h2>Usar eventos del juego</h2>
+    <p class="padding-left-1"> Di os fijasteis bien, en la funcion <em>main.conf()</em> hay un apartado que dice <em>conf.Events = {}</em>, en esa funcion tendreis que habilitar todos los eventos que vallais a usar. </p>
+    <pre>
+		<code class="codeBox">
+			<a class="codeBox-function">function</a> <a class="codeBox-functionName">main.conf</a>()
+                            <a class="codeBox-function">local</a> conf = {}
+			    conf.JSON = false
+			    conf.screen = false
+			    conf.modList = false
+	
+                            <a class="codeBox-comment">conf.Events = {}
+                            conf.Events.enabled = true --> Importante
+                            conf.Events.plrJump = false
+                            conf.Events.plrWalk = false
+                            conf.Events.plrGetDamage = false
+	
+                            conf.Events.click_modMode = false
+                            conf.Events.click_FullScreen = false
+                            conf.Events.click_language = false
+                            conf.Events.click_controls = false
+                            conf.Events.click_options_back = false
+                            conf.Events.click_controls_back = false
+                            conf.Events.click_laguaje_es_es = false
+                            conf.Events.click_laguaje_en_us = false
+                            conf.Events.click_languaje_back = false
+                            conf.Events.click_start = false
+                            conf.Events.click_options = false
+                            conf.Events.click_quit = false</a>
+
+			    <a class="codeBox-return">return</a> conf
+                        <a class="codeBox-function">end</a>
+		</code>
+	</pre>
+    <h2>Crear evento</h2>
+    <p class="padding-left-1"> Para crear un evento solo tendreis que usar esta linea de código: </p>
+    <p class="padding-left-2-small">
+        api.Events:newEvent(&lt;nombre del evento&gt;)
+    </p>
+    <p class="padding-left-1"> Ejemplo: </p>
+    <pre>
+		<code class="codeBox">
+			<a class="codeBox-function">local</a> main = {}
+
+			<a class="codeBox-function">function</a> <a class="codeBox-functionName">main.load</a>(modCreator, api) 
+                            api.Events:<a class="codeBox-functionName">newEvent</a>("coin_collected")
+			<a class="codeBox-function">end</a>
+			
+			<a class="codeBox-return">return</a> main
+		</code>
+	</pre>
+
+    <h2>Ejecutar evento</h2>
+    <p class="padding-left-2-small">
+        api.Events:fire(&lt;nombre del evento&gt;)
+    </p>
+    <pre>
+		<code class="codeBox">
+			<a class="codeBox-function">local</a> main = {}
+
+			<a class="codeBox-function">function</a> <a class="codeBox-functionName">main.load</a>(modCreator, api) 
+                            api.Events:<a class="codeBox-functionName">fire</a>("coin_collected")
+			<a class="codeBox-function">end</a>
+			
+			<a class="codeBox-return">return</a> main
+		</code>
+	</pre>
+
+    <h2>Ejecutar funcion cuando evento suceda</h2>
+    <p class="padding-left-2-small">
+        api.Events:onFire(&lt;nombre del evento&gt;, &lt;función&gt;)
+    </p>
+    <pre>
+		<code class="codeBox">
+			<a class="codeBox-function">local</a> main = {}
+
+			<a class="codeBox-function">function</a> <a class="codeBox-functionName">main.load</a>(modCreator, api) 
+                            api.Events:<a class="codeBox-functionName">onFire</a>("coin_collected", <a class="codeBox-function">function</a>()
+                                <a class="codeBox-functionName">print</a>("Funciono!")
+                            <a class="codeBox-return">end</a>)
+			<a class="codeBox-function">end</a>
+			
+			<a class="codeBox-return">return</a> main
+		</code>
+	</pre>
+
+    <h1>Lista de la API 'modCreation'</h1>
+    <div>
+        <a href="Objects.html">Objetos</a> <br>
+        <a href="Pantallas.html">Pantallas</a> <br>
+        <a href="Botones.html">Botones</a> <br>
+        <a href="Textos.html">Textos</a> <br>
+    </div>
+
+    <h1>Lista de las otras APIs </h1>
+    <div>
+        <a href="JSON.html">JSON</a> <br>
+        <a href="screen.html">screen</a> <br>
+        <a href="Events.html">Events</a> <br>
+        <a href="modList.html">modList</a> <br>
+    </div>
+
+</body>
+
+</html>

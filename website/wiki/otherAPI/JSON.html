@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Wiki de Parkour2D: JSON</title>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="../../assets/parkour2dlogo.png">
+    <link rel="stylesheet" type="text/css" href="../../styles/wikiStyles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Wiki de PARKOUR2D</h1>
+    <h1>JSON</h1>
+    <p class="padding-left-1"> Esta es una API para pasar tablas a texto y viceversa. </p>
+    <h2>Como usar la API</h2>
+    <p class="padding-left-1"> En la API solo existen dos funciones importantes: <em>api.JSON:encode(&lt;tabla&gt;)</em> y <em>api.JSON:decode(&lt;texto&gt;)</em>. </p>
+    <p class="padding-left-2">
+        api.JSON:encode(&lt;tabla&gt;): Cuando le proporcionas una tabla, te la devuelve en forma de texto. <br> api.JSON:decode(&lt;texto&gt;): Cuando le proporcionas una table en forma de texto, te devuelve la tabla.
+    </p>
+    <p class="padding-left-1"> Ejemplo: </p>
+    <pre>
+		<code class="codeBox">
+			<a class="codeBox-function">local</a> main = {}
+
+			<a class="codeBox-function">function</a> <a class="codeBox-functionName">main.load</a>(modCreator, api) 
+                            <a class="codeBox-local">local</a> table = {}
+                            table.coins = 30
+                            table.emeralds = 10
+
+                            <a class="codeBox-local">local</a> string = api.JSON:<a class="codeBox-functionName">encode</a>(table)
+                            <a class="codeBox-functionName">print</a>(string) <a class="codeBox-comment">--> {coins = 30,emeralds = 10}</a>
+
+                            <a class="codeBox-local">local</a> newTable = api.JSON:<a class="codeBox-functionName">decode</a>(string)
+                            <a class="codeBox-functionName">print</a>(newTable) <a class="codeBox-comment">--> table 0xdsfguhj</a>
+			<a class="codeBox-function">end</a>
+			
+			<a class="codeBox-return">return</a> main
+		</code>
+	</pre>
+
+    <h1>Lista de la API 'modCreation'</h1>
+    <div>
+        <a href="Objects.html">Objetos</a> <br>
+        <a href="Pantallas.html">Pantallas</a> <br>
+        <a href="Botones.html">Botones</a> <br>
+        <a href="Textos.html">Textos</a> <br>
+    </div>
+
+    <h1>Lista de las otras APIs </h1>
+    <div>
+        <a href="JSON.html">JSON</a> <br>
+        <a href="screen.html">screen</a> <br>
+        <a href="Events.html">Events</a> <br>
+        <a href="modList.html">modList</a> <br>
+    </div>
+
+</body>
+
+</html>

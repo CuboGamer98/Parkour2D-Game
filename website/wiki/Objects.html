@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Wiki de Parkour2D: Objectos</title>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="../assets/parkour2dlogo.png">
+    <link rel="stylesheet" type="text/css" href="../styles/wikiStyles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Wiki de PARKOUR2D</h1>
+    <h1>Objetos</h1>
+    <p class="padding-left-1"> Los objetos son bloques con caracteristicas únicas, por ejemplo los pinchos clavan y hacen daño, con lo que es objecto, pero el suelo no es un objeto ya que no tiene utilidad alguna. </p>
+    <h2>Crear objeto del juego</h2>
+    <p class="padding-left-1"> Para crear un objeto es tan fácil como poner su nombre y las coordenadas <em>X</em> y <em>Y</em> </p>
+    <pre>
+		<code class="codeBox">
+			<a class="codeBox-function">local</a> main = {}
+
+			<a class="codeBox-function">function</a> <a class="codeBox-functionName">main.load</a>(modCreator, api) 
+                            modCreatior.<a class="codeBox-functionName">newObject</a>("coin", {
+                                x = 100,
+                                y = 100
+                            })
+			<a class="codeBox-function">end</a>
+			
+			<a class="codeBox-return">return</a> main
+		</code>
+	</pre>
+    <P class="padding-left-1"> En ese trozo de código lo que estamos haciendo es crear una moneda en la posicion 100,100 (x,y). </P>
+
+    <h3>Lista de objetos</h3>
+    <div>
+        <p class="padding-left-3">- "spikes": Pinchos que hacen daño.</p>
+        <p class="padding-left-3">- "coin": Moneda que da puntos. </p>
+        <p class="padding-left-3">- "box": Caja con físicas. </p>
+        <p class="padding-left-3">- "red_slime_entity": Enemigo que solo salta pero hace daño. </p>
+        <p class="padding-left-3">- "platform": Plataforma en la que si apretas shift caes.</p>
+    </div>
+
+    <h1>Lista de la API 'modCreation'</h1>
+    <div>
+        <a href="Objects.html">Objetos</a> <br>
+        <a href="Pantallas.html">Pantallas</a> <br>
+        <a href="Botones.html">Botones</a> <br>
+        <a href="Textos.html">Textos</a> <br>
+    </div>
+
+    <h1>Lista de las otras APIs </h1>
+    <div>
+        <a href="otherAPI/JSON.html">JSON</a> <br>
+        <a href="otherAPI/screen.html">screen</a> <br>
+        <a href="otherAPI/Events.html">Events</a> <br>
+        <a href="otherAPI/modList.html">modList</a> <br>
+    </div>
+
+</body>
+
+</html>

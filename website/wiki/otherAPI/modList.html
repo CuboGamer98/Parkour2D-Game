@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Wiki de Parkour2D: modList</title>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="../../assets/parkour2dlogo.png">
+    <link rel="stylesheet" type="text/css" href="../../styles/wikiStyles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Wiki de PARKOUR2D</h1>
+    <h1>modList</h1>
+    <p class="padding-left-1"> modList es una función que cuando la ejecutas te devuelve una tabla con todos los mods cargados en el juego ahora mismo. </p>
+    <h2>Usar función</h2>
+    <p class="padding-left-1"> Ejemplo: </p>
+    <pre>
+		<code class="codeBox">
+			<a class="codeBox-function">local</a> main = {}
+
+			<a class="codeBox-function">function</a> <a class="codeBox-functionName">main.load</a>(modCreator, api) 
+                            local mods = api.getModList()
+			<a class="codeBox-function">end</a>
+			
+			<a class="codeBox-return">return</a> main
+		</code>
+	</pre>
+    <p class="padding-left-1"> Cuando la función se ejecuto le dio a la variable este valor: </p>
+    <pre>
+		<code class="codeBox">
+        {
+            { 
+                name = "mod_menu",
+                modMainPath = "C:\\Users\\CuboGamer98\\AppData\\Roaming\\Parkour2D\\Mods\\mod_menu",
+                modMainModule = "C:\\Users\\CuboGamer98\\AppData\\Roaming\\Parkour2D\\Mods\\mod_menu\\main.lua", 
+                module = { 
+                    conf = &ltfunction 1&gt, 
+                    load = &ltfunction 2&gt
+                }
+            }
+        }
+		</code>
+	</pre>
+
+    <h1>Lista de la API 'modCreation'</h1>
+    <div>
+        <a href="otherAPI/JSON.html">JSON</a> <br>
+        <a href="otherAPI/screen.html">screen</a> <br>
+        <a href="otherAPI/Events.html">Events</a> <br>
+        <a href="otherAPI/modList.html">modList</a> <br>
+    </div>
+
+    <h1>Lista de las otras APIs </h1>
+    <div>
+        <a href="JSON.html">JSON</a> <br>
+        <a href="screen.html">screen</a> <br>
+        <a href="Events.html">Events</a> <br>
+        <a href="modList.html">modList</a> <br>
+    </div>
+
+</body>
+
+</html>
